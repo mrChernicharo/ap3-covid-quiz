@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid Quiz</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Bem vindo ao Quiz sobre COVID-19</h1>
+    <a href="#" class="change-question">Pergunta anterior</a>
+    <a href="#" class="change-question">Próxima pergunta</a>
+
+    <section class="question-container">
+      <article>
+        <h2 id="title" onsubmit=""></h2>
+        <form id="form">
+          <label for="radio1"></label>
+          <input type="radio" name="radio1" id="radio1" /> <br />
+          <label for="radio1"></label>
+          <input type="radio" name="radio1" id="radio2" /> <br />
+          <label for="radio1"></label>
+          <input type="radio" name="radio1" id="radio3" /> <br />
+          <label for="radio1"></label>
+          <input type="radio" name="radio1" id="radio4" /> <br />
+
+          <button type="button" id="btn">Responder!</button>
+        </form>
+      </article>
+    </section>
+    <script type="module" src="/modules/main.js"></script>
+    <script type="module" src="/modules/data.js"></script>
+    <script type="module" src="/modules/utils.js"></script>
+  </body>
+</html>
