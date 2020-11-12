@@ -22,5 +22,9 @@ export function shuffleAnswers(question_obj) {
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value);
 
-  return { question: question_obj.question, answers: [...shuffled] };
+  return {
+    question: question_obj.question,
+    imgUrl: question_obj.imgUrl,
+    answers: [...shuffled],
+  };
 }

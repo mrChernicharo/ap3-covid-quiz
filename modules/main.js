@@ -30,6 +30,10 @@ function renderQuestion(question) {
   const h1 = document.getElementById("title");
   h1.innerText = question.question;
   const labels = document.getElementsByTagName("label");
+  const img = document.getElementById("img");
+
+  img.setAttribute("src", question.imgUrl);
+  console.log(question.imgUrl);
 
   question.answers.map((answer, i) => {
     labels[i].innerText = answer.content;
@@ -52,6 +56,9 @@ function getResult() {
 
   if (playerWins) {
     console.log("certa resposta!");
+
+    alert("certa resposta!");
+
     score++;
     scorePanel.innerText = score;
   } else {
