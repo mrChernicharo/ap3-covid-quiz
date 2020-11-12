@@ -51,14 +51,12 @@ export const questions = [
       {
         isCorrect: false,
         content: "Os comunistas chineses",
-        message:
-          "Errado! Teoria idiota inventada pelas direitas contemporâneas",
+        message: "Errado! Teoria idiota inventada",
       },
       {
         isCorrect: false,
         content: "Os comunistas Russos",
-        message:
-          "Errado! Teoria idiota inventada pelas direitas contemporâneas",
+        message: "Errado! Mais uma teoria idiota",
       },
       {
         isCorrect: false,

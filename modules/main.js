@@ -5,6 +5,7 @@ let correctAnswer;
 let score = 0;
 let rounds = 0;
 let selectedQuestion;
+let btnPressed = false;
 let messages = [];
 const messageDiv = document.getElementById("messageDiv");
 
@@ -16,7 +17,11 @@ function main() {
   renderQuestion(selectedQuestion);
 
   btn.addEventListener("click", (event) => {
-    getResult();
+    if (!btnPressed) {
+      btnPressed = true;
+
+      getResult();
+    }
   });
 }
 
@@ -57,12 +62,11 @@ function renderQuestion(question) {
 }
 
 function getResult() {
-  const scorePanel = document.getElementById("score");
-
   const btn = document.getElementById("btn");
   console.log(btn);
 
   btn.removeEventListener("click", this);
+  const scorePanel = document.getElementById("score");
 
   const chosenOpt = getCheckedOption();
 
@@ -89,6 +93,8 @@ function getResult() {
 function nextQuestion(points) {
   console.log("próxima pergunta! ");
   console.log(points);
+  btnPressed = false;
+
   selectedQuestion = pickQuestion(allQuestions);
   renderQuestion(selectedQuestion);
 }

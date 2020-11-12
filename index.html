@@ -9,36 +9,38 @@
   </head>
   <body>
     <h1>Bem vindo ao Quiz sobre COVID-19</h1>
-    <a href="#" class="change-question">Pergunta anterior</a>
-    <a href="#" class="change-question">Próxima pergunta</a>
+    <!-- <a href="#" class="change-question">Pergunta anterior</a>
+    <a href="#" class="change-question">Próxima pergunta</a> -->
 
     <div class="score-container">
-      <span>Round: </span>
-      <span id="rounds"></span>
-
       <span>Pontuação: </span>
       <span id="score">0</span>
     </div>
 
-    <section class="question-container">
+    <div class="question-container">
       <article>
+        <p>Pergunta <span id="rounds"></span></p>
         <h2 id="title" onsubmit=""></h2>
         <img id="img" />
         <div id="messageDiv"></div>
         <form id="form">
+          <input type="radio" name="radio1" id="radio1" />
           <label for="radio1"></label>
-          <input type="radio" name="radio1" id="radio1" /> <br />
-          <label for="radio1"></label>
-          <input type="radio" name="radio1" id="radio2" /> <br />
-          <label for="radio1"></label>
-          <input type="radio" name="radio1" id="radio3" /> <br />
-          <label for="radio1"></label>
-          <input type="radio" name="radio1" id="radio4" /> <br />
+          <br />
+          <input type="radio" name="radio1" id="radio2" />
+          <label for="radio2"></label>
+          <br />
+          <input type="radio" name="radio1" id="radio3" />
+          <label for="radio3"></label>
+          <br />
+          <input type="radio" name="radio1" id="radio4" />
+          <label for="radio4"></label>
+          <br />
 
           <button type="button" id="btn">Responder!</button>
         </form>
       </article>
-    </section>
+    </div>
     <script type="module" src="/modules/main.js"></script>
     <script type="module" src="/modules/data.js"></script>
     <script type="module" src="/modules/utils.js"></script>

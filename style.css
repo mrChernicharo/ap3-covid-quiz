@@ -1,3 +1,7 @@
+body {
+  font-family: monospace, sans-serif;
+}
+
 .question-container {
   border: 1px solid red;
 }
@@ -9,5 +13,19 @@ img {
 }
 
 #messageDiv {
-  height: 60px;
+  height: 30px;
+}
+form {
+  border: 1px solid blue;
+  width: 340px;
+}
+input,
+label {
+  cursor: pointer;
+}
+
+button {
+  font-size: 18px;
+  width: 200px;
+  margin: 10px auto;
 }
