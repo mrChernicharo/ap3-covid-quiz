@@ -1,14 +1,21 @@
 const urlImages = [
-  "https://www.telessaude.unifesp.br/images/noticias/tele---coronavirussite.jpg",
-  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Novel_Coronavirus_SARS-CoV-2.jpg/1200px-Novel_Coronavirus_SARS-CoV-2.jpg",
-  "https://www.aovivodebrasilia.com.br/wp-content/uploads/2020/07/vacina-covid-19-coronavirus-vaccine.jpeg",
+  "https://conteudo.imguol.com.br/c/entretenimento/1a/2020/03/23/mascara-de-nao-tecido-coronavirus-1584992534058_v2_1920x1280.jpg", // 0 gatinha de máscara
+  "https://www.telessaude.unifesp.br/images/noticias/tele---coronavirussite.jpg", // moleculas
+  "https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Novel_Coronavirus_SARS-CoV-2.jpg/1200px-Novel_Coronavirus_SARS-CoV-2.jpg", // 2 informe-se feião
+  "https://www.aovivodebrasilia.com.br/wp-content/uploads/2020/07/vacina-covid-19-coronavirus-vaccine.jpeg", // vacina
+  "https://exame.com/wp-content/uploads/2020/08/GettyImages-1217170434.jpg?quality=70&strip=info&resize=680,453", // 4 bolinha
+  "https://assets.b9.com.br/wp-content/uploads/2020/02/Coronaviirus-china-mascaras.jpg", // montão de japas
+  "https://specials-images.forbesimg.com/imageserve/1202239593/960x0.jpg?fit=scale", // 6 lockdown,
+  "https://image.kurier.at/images/cfs_landscape_616w_347h/4741017/46-168668159.jpg", // bar vazio
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRiqSpgY3HPgM-li8QMwMrI0MnfBqCiB8VApQ&usqp=CAU", // 8 conspiração
+  "https://s.yimg.com/ny/api/res/1.2/ibbEZHfQuK08Mbarh92pBg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9NjQwO2g9Mzcy/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2020-05/7f89d6b0-8e27-11ea-9fee-a2c8cf8b5b1b", // Aldir
 ];
 
 export const questions = [
   {
     question:
       "Qual o nome da província chinesa onde surgiram os primeiros casos de COVID-19 ?",
-    imgUrl: urlImages[2],
+    imgUrl: urlImages[5],
     answers: [
       { isCorrect: true, content: "Hubei", message: "Correto! Você acertou" },
       {
@@ -32,7 +39,7 @@ export const questions = [
   {
     question:
       "Com o planos de dominar o mundo, quem foi o responsável pela conspiração que deu origem ao COVID-19 ?",
-    imgUrl: urlImages[0],
+    imgUrl: urlImages[8],
 
     answers: [
       {
@@ -64,7 +71,7 @@ export const questions = [
   {
     question:
       "Qual é o total de mortos por COVID-19 no Brasil contabilizados até meados de novembro de 2020 ?",
-    imgUrl: urlImages[1],
+    imgUrl: urlImages[4],
     answers: [
       {
         isCorrect: true,
@@ -92,7 +99,7 @@ export const questions = [
   {
     question:
       "Qual foi o record de mortos no mesmo dia por COVID-19 no Brasil ?",
-    imgUrl: urlImages[0],
+    imgUrl: urlImages[1],
     answers: [
       {
         isCorrect: true,
@@ -120,7 +127,7 @@ export const questions = [
 
   {
     question: "Qual o país teve o maior número de vítimas fatais ?",
-    imgUrl: urlImages[2],
+    imgUrl: urlImages[6],
 
     answers: [
       {
@@ -149,7 +156,7 @@ export const questions = [
   {
     question:
       "Qual é o total acumulado de infecções por COVID no Brasil em meados de Novembro de 2020 ?",
-    imgUrl: urlImages[1],
+    imgUrl: urlImages[7],
 
     answers: [
       {
@@ -172,6 +179,64 @@ export const questions = [
         isCorrect: false,
         content: "1.32 milhão",
         message: "Errado! nossa marca infelizmente já é bem maior...",
+      },
+    ],
+  },
+
+  {
+    question:
+      "Qual dos medicamentos abaixo se mostrou eficaz na prevenção do COVID-19 ?",
+    imgUrl: urlImages[3],
+    answers: [
+      {
+        isCorrect: true,
+        content: "Nenhuma das alternativas",
+        message: "Correto! ",
+      },
+      {
+        isCorrect: false,
+        content: "Cloroquina",
+        message: "Errado! Tocar o berrante vc vem correndo né?",
+      },
+      {
+        isCorrect: false,
+        content: "Azitromicina",
+        message: "Errado! ",
+      },
+      {
+        isCorrect: false,
+        content: "Canabis",
+        message:
+          "Errado! Apesar dos efeitos agradáveis e de suas propriedades medicinais, não se tem evidências de que a planta cura Covid",
+      },
+    ],
+  },
+
+  {
+    question:
+      "A lei de auxílio emergencial para artistas aprovada esse ano recebeu o nome de que poeta e compositor?",
+    imgUrl: urlImages[9],
+    answers: [
+      {
+        isCorrect: true,
+        content: "Aldir Blanc",
+        message: "Correto! ",
+      },
+      {
+        isCorrect: false,
+        content: "João Bosco",
+        message:
+          "Errado! O artista a que nos referimos foi um grande parceiro de João Bosco, mas não ele.",
+      },
+      {
+        isCorrect: false,
+        content: "Guinga",
+        message: "Errado! ",
+      },
+      {
+        isCorrect: false,
+        content: "Benito de Paula",
+        message: "Errado! Vai-te embora Charlie Brown!",
       },
     ],
   },

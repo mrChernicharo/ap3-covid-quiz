@@ -12,7 +12,7 @@ export function getCheckedOption() {
   return selectedOption;
 }
 
-export function shuffleAnswers(question_obj) {
+export function shuffleAnswers(question_obj = {}) {
   if (!question_obj.answers) return;
 
   let unshuffled = question_obj.answers;
