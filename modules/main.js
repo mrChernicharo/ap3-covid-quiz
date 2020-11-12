@@ -1,9 +1,71 @@
 import { questions as allQuestions } from "./data.js";
-import { pickQuestion, renderQuestion } from "./utils.js";
+import { getCheckedOption, shuffleAnswers } from "./utils.js";
 
-console.log(allQuestions);
+let correctAnswer;
+let score = 0;
+let selectedQuestion;
 
-const pickedQuestion = pickQuestion(allQuestions);
-const responseObj = renderQuestion(pickedQuestion);
+function main() {
+  const btn = document.getElementById("btn");
 
-console.log(responseObj);
+  btn.addEventListener("click", (event) => {
+    getResult();
+  });
+  selectedQuestion = "";
+  selectedQuestion = pickQuestion(allQuestions);
+  renderQuestion(selectedQuestion);
+}
+
+function pickQuestion(questions_array) {
+  const max = questions_array.length;
+  const min = 0;
+  const random = (Math.random() * (max - min + 1)) << 0;
+
+  const selectedQuestion = questions_array[random];
+
+  return shuffleAnswers(selectedQuestion);
+}
+
+function renderQuestion(question) {
+  const h1 = document.getElementById("title");
+  h1.innerText = question.question;
+  const labels = document.getElementsByTagName("label");
+
+  question.answers.map((answer, i) => {
+    labels[i].innerText = answer.content;
+    if (answer.isCorrect) {
+      correctAnswer = i;
+    }
+  });
+}
+
+function getResult() {
+  // const returnObj = { checkedOption: getCheckedOption(), correctAnswer };
+  // console.log(returnObj);
+  const scorePanel = document.getElementById("score");
+  const btn = document.getElementById("btn");
+  console.log(btn);
+
+  btn.removeEventListener("click", this);
+
+  const playerWins = getCheckedOption() === correctAnswer ? true : false;
+
+  if (playerWins) {
+    console.log("certa resposta!");
+    score++;
+    scorePanel.innerText = score;
+  } else {
+    console.log("errou!");
+  }
+
+  nextQuestion(score);
+}
+
+function nextQuestion(points) {
+  console.log("próxima pergunta! ");
+  console.log(points);
+  selectedQuestion = pickQuestion(allQuestions);
+  renderQuestion(selectedQuestion);
+}
+
+main();
