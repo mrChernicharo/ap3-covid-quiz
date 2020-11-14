@@ -1,0 +1,68 @@
+body {
+  font-family: monospace, sans-serif;
+  color: #fff;
+  background-color: #2f2e2e;
+}
+
+h1 {
+  background: linear-gradient(45deg, orange, red);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  margin: 6px 0;
+}
+
+p#pergunta {
+  font-size: 24px;
+  font-weight: 600;
+  background-clip: text;
+  text-shadow: 2px 1px black;
+  color: #f67630;
+  color: rgb(166, 49, 179);
+}
+
+img {
+  max-width: 440px;
+  max-height: 220px;
+  margin: 0 auto 10px;
+  border: 10px solid white;
+  box-shadow: 3px 4px 16px 10px #252525;
+}
+
+#messageDiv {
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100vw - 18px);
+  min-height: 30px;
+  text-align: center;
+  vertical-align: bottom;
+  padding: 2px 0;
+}
+form {
+  /* border: 1px solid blue; */
+  width: 340px;
+}
+input,
+label {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  color: red;
+  font-size: 30px;
+}
+
+button {
+  font-size: 18px;
+  width: 200px;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 20px;
+  outline: none;
+  color: #fff;
+  background: linear-gradient(45deg, orange, red);
+  cursor: pointer;
+}

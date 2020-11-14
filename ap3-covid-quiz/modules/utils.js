@@ -5,7 +5,7 @@ export function getCheckedOption() {
   for (let i = 0; i < inputs.length; i++) {
     if (inputs[i].checked) {
       selectedOption = i;
-      console.log("checked -> " + selectedOption);
+      // console.log("checked -> " + selectedOption);
     }
   }
 
@@ -23,8 +23,17 @@ export function shuffleAnswers(question_obj = {}) {
     .map((a) => a.value);
 
   return {
+    id: question_obj.id,
     question: question_obj.question,
     imgUrl: question_obj.imgUrl,
     answers: [...shuffled],
   };
+}
+
+export function generateRandomIndex(array) {
+  console.log("lenght -> " + array.length);
+  const max = array.length;
+  const min = 0;
+  const random = (Math.random() * (max - min + 1)) << 0;
+  return random;
 }

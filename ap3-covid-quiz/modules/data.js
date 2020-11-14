@@ -13,60 +13,125 @@ const urlImages = [
 
 export const questions = [
   {
+    id: 0,
     question:
-      "Qual o nome da província chinesa onde surgiram os primeiros casos de COVID-19 ?",
-    imgUrl: urlImages[5],
-    answers: [
-      { isCorrect: true, content: "Hubei", message: "Correto! Você acertou" },
-      {
-        isCorrect: false,
-        content: "Wuhan",
-        message: "Errado! Wuhan é a capital da província de Hubei",
-      },
-      {
-        isCorrect: false,
-        content: "Hong Kong",
-        message:
-          "Errado! Hong Kong não tem nada a ver com o começo da pandemia! kkkk",
-      },
-      {
-        isCorrect: false,
-        content: "Pequim",
-        message: "Errado! Pequim é a capital da China",
-      },
-    ],
-  },
-  {
-    question:
-      "Com o planos de dominar o mundo, quem foi o responsável pela conspiração que deu origem ao COVID-19 ?",
-    imgUrl: urlImages[8],
-
+      "Qual é a droga que tem sido usada tratamento de casos graves e que foi responsável por uma redução de 66% na incidência de mortes por COVID-19 ?",
+    imgUrl: urlImages[0],
     answers: [
       {
         isCorrect: true,
-        content: "Ninguém",
+        content: "Dexametasona",
+        message: "Correto! Você acertou.",
+      },
+      {
+        isCorrect: false,
+        content: "Cloroquina",
+        message: "Errado! ",
+      },
+      {
+        isCorrect: false,
+        content: "Melformina",
+        message: "Errado! A melformina previne efitos do Diabetes 2",
+      },
+      {
+        isCorrect: false,
+        content: "Caninha da Roça",
         message:
-          "Correto! Você acertou. Há uma infinidade de teorias conpiratórias sobre o COVID. Não entre nessa!",
+          "Errado! Mas quem se importa? Afinal o importante é que a gente pode tomar uma cana! Saúde!",
+      },
+    ],
+  },
+  {
+    id: 1,
+    question:
+      "Qual foi o record de mortos no mesmo dia por COVID-19 no Brasil ?",
+    imgUrl: urlImages[1],
+    answers: [
+      {
+        isCorrect: true,
+        content: "1595 mortos",
+        message:
+          "Correto! Você acertou. O dia 31 de Julho de 2020 é o dono desse triste recorde",
       },
       {
         isCorrect: false,
-        content: "Os comunistas chineses",
-        message: "Errado! Teoria idiota inventada",
+        content: "3420 mortos",
+        message: "Errado! Também não foi tanta gente assim não, calma!",
       },
       {
         isCorrect: false,
-        content: "Os comunistas Russos",
-        message: "Errado! Mais uma teoria idiota",
+        content: "24 mortos",
+        message: "Errado! Não vem subdimenisonar os dados não, tá bom?",
       },
       {
         isCorrect: false,
-        content: "Elon Musk",
-        message: "Errado! Claro...",
+        content: "892 mortos",
+        message: "Errado! nosso recorde infelizmente foi maior...",
       },
     ],
   },
 
   {
+    id: 2,
+    question:
+      "A medicina mundial está encarando o desafio sem precedentes de criar uma vacina em menos de 2 anos. Você saberia dizer qual o tempo médio para o desenvolvimento de uma vacina ?",
+    imgUrl: urlImages[2],
+    answers: [
+      {
+        isCorrect: true,
+        content: "de 10 a 15 anos",
+        message: "Certa resposta!",
+      },
+      {
+        isCorrect: false,
+        content: "entre 4 e 6 anos",
+        message: "Errado! Tá achando que é molezinha é ?!",
+      },
+      {
+        isCorrect: false,
+        content: "entre 7 e 9 anos",
+        message: "Errooooou!",
+      },
+      {
+        isCorrect: false,
+        content: "entre 20 e 30 anos",
+        message: "Errado! O processo é lento... Mas nem tanto né",
+      },
+    ],
+  },
+
+  {
+    id: 3,
+    question:
+      "Qual dos medicamentos abaixo se mostrou eficaz na prevenção do COVID-19 ?",
+    imgUrl: urlImages[3],
+    answers: [
+      {
+        isCorrect: true,
+        content: "Nenhuma das alternativas",
+        message: "Correto! ",
+      },
+      {
+        isCorrect: false,
+        content: "Cloroquina",
+        message: "Errado! Tocar o berrante vc vem correndo né?",
+      },
+      {
+        isCorrect: false,
+        content: "Azitromicina",
+        message: "Errado! ",
+      },
+      {
+        isCorrect: false,
+        content: "Canabis",
+        message:
+          "Errado! Apesar dos efeitos agradáveis e de suas propriedades medicinais, não se tem evidências de que a planta cura Covid",
+      },
+    ],
+  },
+
+  {
+    id: 4,
     question:
       "Qual é o total de mortos por COVID-19 no Brasil contabilizados até meados de novembro de 2020 ?",
     imgUrl: urlImages[4],
@@ -95,35 +160,33 @@ export const questions = [
   },
 
   {
+    id: 5,
     question:
-      "Qual foi o record de mortos no mesmo dia por COVID-19 no Brasil ?",
-    imgUrl: urlImages[1],
+      "Qual o nome da província chinesa onde surgiram os primeiros casos de COVID-19 ?",
+    imgUrl: urlImages[5],
     answers: [
+      { isCorrect: true, content: "Hubei", message: "Correto! Você acertou" },
       {
-        isCorrect: true,
-        content: "1595 mortos",
+        isCorrect: false,
+        content: "Wuhan",
+        message: "Errado! Wuhan é a capital da província de Hubei",
+      },
+      {
+        isCorrect: false,
+        content: "Hong Kong",
         message:
-          "Correto! Você acertou. O dia 31 de Julho de 2020 é o dono desse triste record",
+          "Errado! Hong Kong não tem nada a ver com o começo da pandemia! kkkk",
       },
       {
         isCorrect: false,
-        content: "3420 mortos",
-        message: "Errado! Também não foi tanta gente assim não, calma!",
-      },
-      {
-        isCorrect: false,
-        content: "24 mortos",
-        message: "Errado! Não vem subdimenisonar os dados não, tá bom?",
-      },
-      {
-        isCorrect: false,
-        content: "892 mortos",
-        message: "Errado! nosso record infelizmente foi maior...",
+        content: "Pequim",
+        message: "Errado! Pequim é a capital da China",
       },
     ],
   },
 
   {
+    id: 6,
     question: "Qual o país teve o maior número de vítimas fatais ?",
     imgUrl: urlImages[6],
 
@@ -152,6 +215,7 @@ export const questions = [
   },
 
   {
+    id: 7,
     question:
       "Qual é o total acumulado de infecções por COVID no Brasil em meados de Novembro de 2020 ?",
     imgUrl: urlImages[7],
@@ -182,35 +246,38 @@ export const questions = [
   },
 
   {
+    id: 8,
     question:
-      "Qual dos medicamentos abaixo se mostrou eficaz na prevenção do COVID-19 ?",
-    imgUrl: urlImages[3],
+      "Com o planos de dominar o mundo, quem foi o responsável pela conspiração que deu origem ao COVID-19 ?",
+    imgUrl: urlImages[8],
+
     answers: [
       {
         isCorrect: true,
-        content: "Nenhuma das alternativas",
-        message: "Correto! ",
-      },
-      {
-        isCorrect: false,
-        content: "Cloroquina",
-        message: "Errado! Tocar o berrante vc vem correndo né?",
-      },
-      {
-        isCorrect: false,
-        content: "Azitromicina",
-        message: "Errado! ",
-      },
-      {
-        isCorrect: false,
-        content: "Canabis",
+        content: "Ninguém",
         message:
-          "Errado! Apesar dos efeitos agradáveis e de suas propriedades medicinais, não se tem evidências de que a planta cura Covid",
+          "Correto! Você acertou. Há uma infinidade de teorias conpiratórias sobre o COVID. Não entre nessa!",
+      },
+      {
+        isCorrect: false,
+        content: "Os comunistas chineses",
+        message: "Errado! Isso é apenas mais uma teoria idiota da conspiração",
+      },
+      {
+        isCorrect: false,
+        content: "Os comunistas Russos",
+        message: "Errado! Mais provável que fosse culpa dos marcianos",
+      },
+      {
+        isCorrect: false,
+        content: "Elon Musk",
+        message: "Errado! Claro...",
       },
     ],
   },
 
   {
+    id: 9,
     question:
       "A lei de auxílio emergencial para artistas aprovada esse ano recebeu o nome de que poeta e compositor?",
     imgUrl: urlImages[9],

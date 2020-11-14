@@ -1,10 +1,15 @@
 import { questions as allQuestions } from "./data.js";
-import { getCheckedOption, shuffleAnswers } from "./utils.js";
+import {
+  getCheckedOption,
+  shuffleAnswers,
+  generateRandomIndex,
+} from "./utils.js";
 
 let correctAnswer;
 let score = 0;
 let rounds = 0;
 let selectedQuestion;
+let currentQuestionId;
 let btnPressed = false;
 let messages = [];
 const messageDiv = document.getElementById("messageDiv");
@@ -14,6 +19,7 @@ function main() {
 
   selectedQuestion = "";
   selectedQuestion = pickQuestion(allQuestions);
+
   renderQuestion(selectedQuestion);
 
   btn.addEventListener("click", (event) => {
@@ -26,11 +32,21 @@ function main() {
 }
 
 function pickQuestion(questions_array) {
-  const max = questions_array.length;
-  const min = 0;
-  const random = (Math.random() * (max - min + 1)) << 0;
+  let index = generateRandomIndex(questions_array);
+  console.log("index: " + index + ".  CurrentQuestionId: " + currentQuestionId);
 
-  const selectedQuestion = questions_array[random];
+  let selectedQuestion = questions_array[index];
+
+  if (selectedQuestion.id === currentQuestionId) {
+    console.log("dispositivo pra evitar repetição da mesma pergunta");
+    if (index === questions_array.length - 1) {
+      console.log("coé aldir");
+      selectedQuestion = questions_array[0];
+    } else {
+      selectedQuestion = questions_array[index + 1];
+    }
+  }
+  currentQuestionId = selectedQuestion.id;
 
   return shuffleAnswers(selectedQuestion);
 }
@@ -64,27 +80,27 @@ function renderQuestion(question) {
 function getResult() {
   const btn = document.getElementById("btn");
   console.log(btn);
-
   btn.removeEventListener("click", this);
+
   const scorePanel = document.getElementById("score");
 
   const chosenOpt = getCheckedOption();
-
   const playerWins = getCheckedOption() === correctAnswer ? true : false;
+
+  console.log(chosenOpt);
 
   if (playerWins) {
     console.log("certa resposta!");
-
     // alert("certa resposta!");
-
+    messageDiv.style.backgroundColor = "#08cf75";
     score++;
     scorePanel.innerText = score;
   } else {
     console.log("errou!");
+    messageDiv.style.backgroundColor = "red";
   }
 
   console.log(messages[chosenOpt]);
-
   messageDiv.innerHTML = `<span>${messages[chosenOpt]}</span>`;
 
   setTimeout(() => nextQuestion(score), 3000);
@@ -94,6 +110,7 @@ function nextQuestion(points) {
   console.log("próxima pergunta! ");
   console.log(points);
   btnPressed = false;
+  messageDiv.style.backgroundColor = "transparent";
 
   selectedQuestion = pickQuestion(allQuestions);
   renderQuestion(selectedQuestion);
