@@ -39,7 +39,7 @@ img {
   min-height: 30px;
   text-align: center;
   vertical-align: bottom;
-  padding: 2px 0;
+  padding: 2px 4px;
 }
 form {
   /* border: 1px solid blue; */
@@ -52,6 +52,7 @@ label {
 
 input[type="radio"] {
   color: red;
+  border: 2px solid green;
   font-size: 30px;
 }
 

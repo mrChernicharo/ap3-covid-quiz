@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fim de Jogo</title>
+    <style>
+      body {
+        font-family: monospace;
+        background-color: #2f2e2e;
+        color: #fff;
+      }
+      strong,
+      a {
+        background: linear-gradient(200deg, orange, crimson);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+      }
+      a {
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Fim de Jogo</h1>
+
+    <p>
+      Você acertou <strong id="final-score"></strong> de
+      <strong id="total-questions"></strong> perguntas
+    </p>
+    <a href="index.html">Jogar novamente</a>
+  </body>
+
+  <script>
+    let params = new URL(document.location).searchParams;
+    let score = params.get("score");
+    let rounds = params.get("rounds");
+    console.log(score);
+    console.log(rounds);
+
+    document.getElementById("final-score").innerText = score;
+    document.getElementById("total-questions").innerText = rounds;
+  </script>
+</html>

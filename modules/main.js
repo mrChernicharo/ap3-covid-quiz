@@ -6,8 +6,9 @@ import {
 } from "./utils.js";
 
 let correctAnswer;
-let score = 0;
+export let score = 0;
 let rounds = 0;
+let qtdRounds = 10;
 let selectedQuestion;
 let currentQuestionId;
 let btnPressed = false;
@@ -52,6 +53,12 @@ function pickQuestion(questions_array) {
 }
 
 function renderQuestion(question) {
+  if (rounds >= qtdRounds) {
+    // fim de jogo
+    rounds = 0;
+    window.location.assign(`final.html?rounds=${qtdRounds}&score=${score}`);
+  }
+
   rounds++;
   const roundsPanel = document.getElementById("rounds");
   roundsPanel.innerText = rounds;
