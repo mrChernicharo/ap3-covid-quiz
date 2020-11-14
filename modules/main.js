@@ -110,7 +110,7 @@ function getResult() {
   console.log(messages[chosenOpt]);
   messageDiv.innerHTML = `<span>${messages[chosenOpt]}</span>`;
 
-  setTimeout(() => nextQuestion(score), 3000);
+  setTimeout(() => nextQuestion(score), 8000);
 }
 
 function nextQuestion(points) {

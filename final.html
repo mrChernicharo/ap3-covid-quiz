@@ -29,6 +29,7 @@
       Você acertou <strong id="final-score"></strong> de
       <strong id="total-questions"></strong> perguntas
     </p>
+    <p id="message"></p>
     <a href="index.html">Jogar novamente</a>
   </body>
 
@@ -41,5 +42,20 @@
 
     document.getElementById("final-score").innerText = score;
     document.getElementById("total-questions").innerText = rounds;
+
+    let percent = score / rounds;
+
+    let message =
+      percent === 1
+        ? "⭐️ Uau! Parabéns, você gabaritou o teste!"
+        : percent > 0.75
+        ? "🔥 Ótimo! Mandou muito! Você sabe tudo sobre o corona virus"
+        : percent > 0.5
+        ? "👍🏽  Muito bem você está acima da média...Mas dá pra fazer melhor"
+        : percent <= 0.5 && percent > 0.3
+        ? "💆🏽‍♂️ Quem sabe na próxima você manda melhor"
+        : "👀 Mandou mal hein! Melhor estudar um pouco e tentar novamente";
+
+    document.getElementById("message").innerText = message;
   </script>
 </html>
